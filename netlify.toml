@@ -1,3 +1,5 @@
+# Netlify configuration (also compatible with GitHub Pages)
+# Functions will only work with Netlify or similar serverless platforms
 [build]
   command = "npm run build"
   publish = "."
