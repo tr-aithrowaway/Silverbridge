@@ -1,0 +1,6 @@
+# Netlify configuration for static site
+[build]
+  command = "npm run build"
+  publish = "."
+
+# No serverless functions needed since using Google Scheduler directly

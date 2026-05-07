@@ -1,0 +1,22 @@
+{
+  "name": "silverbridge-it-services",
+  "version": "1.0.0",
+  "description": "IT services website with Google Scheduler integration for Silverbridge",
+  "main": "index.js",
+  "scripts": {
+    "start": "netlify dev",
+    "build": "echo 'Build completed for GitHub Pages'",
+    "test": "echo 'No tests specified'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "booking",
+    "calendar",
+    "google-calendar",
+    "appointment",
+    "it-services"
+  ],
+  "author": "Silverbridge",
+  "license": "MIT"
+}
