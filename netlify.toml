@@ -1,25 +1,6 @@
-# Netlify configuration (also compatible with GitHub Pages)
-# Functions will only work with Netlify or similar serverless platforms
+# Netlify configuration for static site
 [build]
   command = "npm run build"
   publish = "."
-  functions = "functions"
 
-[template.environment]
-  GOOGLE_CLIENT_ID = "Your Google Client ID"
-  GOOGLE_CLIENT_SECRET = "Your Google Client Secret"
-  GOOGLE_CALENDAR_ID = "Your Google Calendar ID (or primary)"
-  EMAIL_USER = "ai.gwynclaw@gmail.com"
-  EMAIL_APP_PASSWORD = "Your Gmail App Password"
-
-[[redirects]]
-  from = "/api/book-appointment"
-  to = "/.netlify/functions/book-appointment"
-  status = 200
-
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
-    Access-Control-Allow-Headers = "Content-Type"
+# No serverless functions needed since using Google Scheduler directly

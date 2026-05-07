@@ -1,66 +1,42 @@
 # Silverbridge IT Services Website
 
-Professional IT services website with integrated booking system that connects to Google Calendar.
+Professional IT services website with integrated Google Scheduler for appointments.
 
 ## Features
 
 - Modern, responsive design with dark theme
 - Service listings with detailed descriptions
-- Integrated booking form that creates Google Calendar events
-- Automated email confirmations
+- Integrated Google Scheduler for booking appointments
 - PST timezone with specific availability windows:
   - Weekdays (Mon-Fri): 5PM-8PM
   - Weekends (Sat-Sun): 9AM-8PM
 
-## Booking System
-
-The booking form integrates with Google Calendar using OAuth2 authentication:
-
-1. Form submissions create calendar events in the configured calendar
-2. Events include customer details, service type, and issue description
-3. Confirmation emails are automatically sent to customers
-4. Gwyn (ai.gwynclaw@gmail.com) receives copies for clerical functions
-
 ## Setup Instructions
 
-### Google Calendar API Setup
+### Google Scheduler Integration
 
-1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project or select an existing one
-3. Enable the Google Calendar API
-4. Create OAuth2 credentials (Web application)
-5. Add your domain to authorized redirect URIs
-6. Download the credentials JSON file
+The site now uses a direct Google Scheduler link embedded as an iframe:
 
-### Environment Variables
-
-Set the following environment variables:
-
-- `GOOGLE_CLIENT_ID`: Your Google OAuth2 client ID
-- `GOOGLE_CLIENT_SECRET`: Your Google OAuth2 client secret
-- `GOOGLE_CALENDAR_ID`: Target calendar ID (or 'primary')
-- `EMAIL_USER`: Email address for sending confirmations (ai.gwynclaw@gmail.com)
-- `EMAIL_APP_PASSWORD`: Gmail app password for the email account
+1. Visit your Google Scheduler page (e.g., https://calendar.app.google/your-scheduler-link)
+2. Replace the iframe src in index.html with your scheduler link
+3. Adjust the iframe height if needed for optimal display
 
 ### Deployment
 
-This site is designed for deployment on Netlify with serverless functions:
+This site is designed for static hosting on GitHub Pages or Netlify:
 
-1. Connect your GitHub repository to Netlify
-2. Set the environment variables in Netlify's dashboard
-3. The build command will automatically install dependencies and deploy functions
+1. Push your repository to GitHub
+2. Enable GitHub Pages in your repository settings
+3. The site will automatically deploy from the main branch
 
 ## File Structure
 
-- `index.html`: Main website with booking form
+- `index.html`: Main website with Google Scheduler iframe
 - `styles.css`: Styling for the entire site
-- `script.js`: Frontend JavaScript for navigation and form handling
-- `/functions/`: Serverless functions for backend operations
-  - `calendar-integration.js`: Core calendar integration logic
-  - `book-appointment.js`: API endpoint for booking requests
+- `script.js`: Frontend JavaScript for navigation
 
 ## Security
 
-- API keys and sensitive information are stored as environment variables
-- Form includes honeypot field to prevent spam
-- All external API calls are validated and sanitized
+- No server-side processing required
+- All functionality is client-side
+- No sensitive information stored in the repository

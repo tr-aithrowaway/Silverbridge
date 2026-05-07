@@ -1,20 +1,15 @@
 {
-  "name": "silverbridge-booking-system",
+  "name": "silverbridge-it-services",
   "version": "1.0.0",
-  "description": "Booking system with Google Calendar integration for Silverbridge IT services",
+  "description": "IT services website with Google Scheduler integration for Silverbridge",
   "main": "index.js",
   "scripts": {
     "start": "netlify dev",
     "build": "echo 'Build completed for GitHub Pages'",
     "test": "echo 'No tests specified'"
   },
-  "dependencies": {
-    "googleapis": "^105.0.0",
-    "nodemailer": "^6.9.0"
-  },
-  "devDependencies": {
-    "@netlify/functions": "^2.0.0"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "keywords": [
     "booking",
     "calendar",
