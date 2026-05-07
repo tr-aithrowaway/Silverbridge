@@ -713,10 +713,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
+    min-height: 700px;
+    width: 100%;
 }
 .scheduler-container iframe {
     border: none;
-    min-height: 600px;
+    min-height: 700px;
+    width: 100%;
 }
 .book-form {
     background: var(--surface);
